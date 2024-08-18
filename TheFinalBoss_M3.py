@@ -12,13 +12,13 @@ def calculate_structure_sum(data_structure):
         for key, value in data_structure.items():
             summa += calculate_structure_sum(key)
             summa += calculate_structure_sum(value)
-    elif isinstance(data_structure, list):  # if data_structure == list, tuple, set
+    elif isinstance(data_structure, list):  # if data_structure == list
         for item in data_structure:
             summa += calculate_structure_sum(item)
-    elif isinstance (data_structure, tuple):  # if data_structure == list, tuple, set
+    elif isinstance (data_structure, tuple):  # if data_structure == tuple
         for item in data_structure:
             summa += calculate_structure_sum(item)
-    elif isinstance(data_structure, set):  # if data_structure == list, tuple, set
+    elif isinstance(data_structure, set):  # if data_structure ==  set
         for item in data_structure:
             summa += calculate_structure_sum(item)
     return summa
